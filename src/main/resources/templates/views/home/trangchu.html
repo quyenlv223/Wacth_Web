@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/weblayout}"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+
+    <!--    &lt;!&ndash; Site title &ndash;&gt;-->
+    <!--    <title>Galio - Mega Shop Responsive Bootstrap 4 Template</title>-->
+    <!--    &lt;!&ndash; Favicon &ndash;&gt;-->
+    <!--    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />-->
+    <!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+    <!--    <link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--    &lt;!&ndash; Font-Awesome CSS &ndash;&gt;-->
+    <!--    <link href="assets/css/font-awesome.min.css" rel="stylesheet">-->
+    <!--    &lt;!&ndash; helper class css &ndash;&gt;-->
+    <!--    <link href="assets/css/helper.min.css" rel="stylesheet">-->
+    <!--    &lt;!&ndash; Plugins CSS &ndash;&gt;-->
+    <!--    <link href="assets/css/plugins.css" rel="stylesheet">-->
+    <!--    &lt;!&ndash; Main Style CSS &ndash;&gt;-->
+    <!--    <link href="assets/css/style.css" rel="stylesheet">-->
+    <!--    <link href="assets/css/skin-default.css" rel="stylesheet" id="galio-skin">-->
+</head>
+
+<body layout:fragment="content">
+<!-- color switcher start -->
+<div class="color-switcher">
+    <div class="color-switcher-inner">
+        <div class="switcher-icon">
+            <i class="fa fa-cog fa-spin"></i>
+        </div>
+
+        <div class="switcher-panel-item">
+            <h3>Color Schemes</h3>
+            <ul class="nav flex-wrap colors">
+                <li class="default active" data-color="default" data-toggle="tooltip" data-placement="top" title="Red"></li>
+                <li class="green" data-color="green" data-toggle="tooltip" data-placement="top" title="Green"></li>
+                <li class="soft-green" data-color="soft-green" data-toggle="tooltip" data-placement="top" title="Soft-Green"></li>
+                <li class="sky-blue" data-color="sky-blue" data-toggle="tooltip" data-placement="top" title="Sky-Blue"></li>
+                <li class="orange" data-color="orange" data-toggle="tooltip" data-placement="top" title="Orange"></li>
+                <li class="violet" data-color="violet" data-toggle="tooltip" data-placement="top" title="Violet"></li>
+            </ul>
+        </div>
+
+        <div class="switcher-panel-item">
+            <h3>Layout Style</h3>
+            <ul class="nav layout-changer">
+                <li><button class="btn-layout-changer active" data-layout="wide">Wide</button></li>
+                <li><button class="btn-layout-changer" data-layout="boxed">Boxed</button></li>
+            </ul>
+        </div>
+
+<!--        <div class="switcher-panel-item bg">-->
+<!--            <h3>Background Pattern</h3>-->
+<!--            <ul class="nav flex-wrap bgbody-style bg-pattern">-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/1.png}" alt="Pettern"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/2.png}" alt="Pettern"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/3.png}" alt="Pettern"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/4.png}" alt="Pettern"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/5.png}" alt="Pettern"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-pettern/6.png}" alt="Pettern"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--        <div class="switcher-panel-item bg">-->
+<!--            <h3>Background Image</h3>-->
+<!--            <ul class="nav flex-wrap bgbody-style bg-img">-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/01.jpg}" alt="Images"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/02.jpg}" alt="Images"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/03.jpg}" alt="Images"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/04.jpg}" alt="Images"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/05.jpg}" alt="Images"></li>-->
+<!--                <li><img th:src="@{/assets/img/bg-panel/bg-img/06.jpg}" alt="Images"></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+    </div>
+</div>
+<!-- color switcher end -->
+<div class="wrapper box-layout">
+
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-12">-->
+<!--                <div class="slider-wrapper-area">-->
+<!--                    <div class="hero-slider-active hero__1 slick-dot-style hero-dot">-->
+<!--                        &lt;!&ndash;<div class="single-slider" style="background-image: url(/assets/img/slider/slider11_bg.jpg);">&ndash;&gt;-->
+<!--                        <div class="single-slider" style="background-image: url(/assets/img/bannershop1.jpg);">-->
+<!--                            <div class="container p-0">-->
+<!--                                <div class="slider-main-content">-->
+<!--                                    <div class="slider-content-img">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable1.png}" alt="">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable2.png}" alt="">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable3.png}" alt="">-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash;<div class="slider-text">-->
+<!--                                        <div class="slider-label">-->
+<!--                                            <img th:src="@{/assets/img/slider/slider11_lable4.png}" alt="">-->
+<!--                                        </div>-->
+<!--                                        &lt;!&ndash;<h1>headphones az12</h1>-->
+<!--                                        <p>Typi Non Habent Claritatem Insitam; Est Usus Legentis</p>&ndash;&gt;-->
+<!--                                    </div>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="single-slider" style="background-image: url(/assets/img/slider/slider12_bg.jpg);">-->
+<!--                            <div class="container p-0">-->
+<!--                                <div class="slider-main-content">-->
+<!--                                    <div class="slider-content-img">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable1.png}" alt="">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable2.png}" alt="">-->
+<!--                                        <img th:src="@{/assets/img/slider/slider11_lable3.png}" alt="">-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash;<div class="slider-text">-->
+<!--                                        <div class="slider-label">-->
+<!--                                            <img th:src="@{/assets/img/slider/slider11_lable4.png}" alt="">-->
+<!--                                        </div>-->
+<!--                                        <h1>samson s90</h1>-->
+<!--                                        <p>Typi Non Habent Claritatem Insitam; Est Usus Legentis</p>-->
+<!--                                    </div>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- hero slider end -->
+
+    <!-- home banner area start -->
+<!--    <div class="banner-area mt-30">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-3 col-md-3 col-sm-6 order-1">-->
+<!--                    <div class="img-container img-full fix imgs-res mb-sm-30">-->
+<!--                        <a href="#">-->
+<!--                            <img th:src="@{/assets/img/postershop3.png}" alt="">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-5 col-md-5 order-sm-3">-->
+<!--                    <div class="img-container img-full fix mb-30">-->
+<!--                        <a href="#">-->
+<!--                            <img th:src="@{/assets/img/banner/banner_static_top1.jpg}" alt="">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <div class="img-container img-full fix mb-30">-->
+<!--                        <a href="#">-->
+<!--                            <img th:src="@{/assets/img/postershop2.png}" alt="">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-4 col-sm-6 order-2 order-md-3">-->
+<!--                    <div class="img-container img-full fix">-->
+<!--                        <a href="#">-->
+<!--                            <img th:src="@{/assets/img/postershop4.png}" alt="">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- home banner area end -->
+
+
+
+
+<!--    slide show-->
+   <div class="container">
+       <!-- Slideshow container -->
+       <div class="slideshow-container mt-4">
+
+           <!-- Full-width images with number and caption text -->
+           <div class="mySlides fade">
+<!--               <div class="numbertext">1 / 3</div>-->
+               <img th:src="@{/assets/img/banner1.jpg}" style="width:1500px" height="350px">
+<!--               <div class="text">Caption Text</div>-->
+           </div>
+
+           <div class="mySlides fade">
+<!--               <div class="numbertext">2 / 3</div>-->
+               <img th:src="@{/assets/img/banner2.jpg}" style="width:1500px" height="350px">
+<!--               <div class="text">Caption Two</div>-->
+           </div>
+
+           <div class="mySlides fade">
+<!--               <div class="numbertext">3 / 3</div>-->
+               <img th:src="@{/assets/img/banner3.jpg}" style="width:1500px" height="350px">
+<!--               <div class="text">Caption Three</div>-->
+           </div>
+           <div class="mySlides fade">
+               <!--               <div class="numbertext">3 / 3</div>-->
+               <img th:src="@{/assets/img/banner4.jpg}" style="width:1500px" height="350px">
+               <!--               <div class="text">Caption Three</div>-->
+           </div>
+
+           <!-- Next and previous buttons -->
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       </div>
+       <br>
+
+       <!-- The dots/circles -->
+<!--       <div style="text-align:center">-->
+<!--           <span class="dot" onclick="currentSlide(1)"></span>-->
+<!--           <span class="dot" onclick="currentSlide(2)"></span>-->
+<!--           <span class="dot" onclick="currentSlide(3)"></span>-->
+<!--       </div>-->
+
+       <style>
+           * {box-sizing:border-box}
+
+            Slideshow container
+           .slideshow-container {
+               max-width: 1000px;
+               position: relative;
+               margin: auto;
+           }
+
+           /* Hide the images by default */
+           .mySlides {
+               display: none;
+           }
+
+           /* Next & previous buttons */
+           .prev, .next {
+               cursor: pointer;
+               position: absolute;
+               top: 50%;
+               width: auto;
+               margin-top: -22px;
+               padding: 16px;
+               color: white;
+               font-weight: bold;
+               font-size: 18px;
+               transition: 0.6s ease;
+               border-radius: 0 3px 3px 0;
+               user-select: none;
+           }
+
+           /* Position the "next button" to the right */
+           .next {
+               right: 0;
+               border-radius: 3px 0 0 3px;
+           }
+
+           /* On hover, add a black background color with a little bit see-through */
+           .prev:hover, .next:hover {
+               background-color: rgba(0,0,0,0.8);
+           }
+
+           /* Caption text */
+           .text {
+               color: #f2f2f2;
+               font-size: 15px;
+               padding: 8px 12px;
+               position: absolute;
+               bottom: 8px;
+               width: 100%;
+               text-align: center;
+           }
+
+           /* Number text (1/3 etc) */
+           .numbertext {
+               color: #f2f2f2;
+               font-size: 12px;
+               padding: 8px 12px;
+               position: absolute;
+               top: 0;
+           }
+
+           /* The dots/bullets/indicators */
+           .dot {
+               cursor: pointer;
+               height: 15px;
+               width: 15px;
+               margin: 0 2px;
+               background-color: #bbb;
+               border-radius: 50%;
+               display: inline-block;
+               transition: background-color 0.6s ease;
+           }
+
+           .active, .dot:hover {
+               background-color: #717171;
+           }
+
+           /* Fading animation */
+           .fade {
+               animation-name: fade;
+               animation-duration: 1.5s;
+           }
+
+           @keyframes fade {
+               from {opacity: .4}
+               to {opacity: 1}
+           }
+       </style>
+
+       <script>
+           let slideIndex = 0;
+           showSlides();
+
+           function showSlides() {
+               let i;
+               let slides = document.getElementsByClassName("mySlides");
+               for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";
+               }
+               slideIndex++;
+               if (slideIndex > slides.length) {slideIndex = 1}
+               slides[slideIndex-1].style.display = "block";
+               setTimeout(showSlides, 2000); // Change image every 2 seconds
+           }
+       </script>
+   </div>
+
+
+    <!-- page wrapper start -->
+    <div class="page-wrapper pt-6 pb-28 pb-md-6 pb-sm-6 pt-xs-36">
+        <div class="container">
+            <div class="row">
+                <!-- start home sidebar -->
+                <div class="col-lg-3">
+                    <div class="home-sidebar">
+                        <!-- hot deals area start -->
+                        <div class="main-sidebar hot-deals-wrap mb-30">
+                            <div class="section-title-2 d-flex justify-content-between mb-28">
+                                <h3>Sản phẩm hot</h3>
+                                <div class="slick-append"></div>
+                            </div> <!-- section title end -->
+                            <div class="deals-carousel-active slick-padding slick-arrow-style">
+                                <!-- product single item start -->
+                                <th:block th:each="iphone : ${list}">
+                                    <div class="product-item fix">
+                                        <div class="product-thumb">
+                                            <a th:href="@{/product/{id}(id = ${iphone.id})}" >
+                                                <img th:src="${iphone.imageKey}" alt="">
+                                            </a>
+                                            <div class="product-label">
+                                                <span>hot</span>
+                                            </div>
+                                            <div class="product-action-link">
+                                                <a href="#" data-toggle="modal" data-target="#quick_view"> <span
+                                                        data-toggle="tooltip" data-placement="left" title="Quick view"><i
+                                                        class="fa fa-search"></i></span> </a>
+                                                <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i
+                                                        class="fa fa-heart-o"></i></a>
+                                                <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i
+                                                        class="fa fa-refresh"></i></a>
+                                                <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i
+                                                        class="fa fa-shopping-cart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">Virtual Product 01</a></h4>
+                                            <div class="pricebox">
+                                                <span class="regular-price" th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}">$70.00</span>
+                                                <div class="ratings">
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <div class="pro-review">
+                                                        <span>1 review(s)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </th:block>
+                            </div>
+                        </div>
+                        <!-- hot deals area end -->
+
+                        <!-- best seller area start -->
+                        <div class="main-sidebar category-wrapper mb-24">
+                            <div class="section-title-2 d-flex justify-content-between mb-28">
+                                <h3>Sản phẩm hot</h3>
+                                <div class="category-append"></div>
+                            </div> <!-- section title end -->
+                            <div class="category-carousel-active row" data-row="4">
+                                <th:block th:each="iphone : ${listRandom}">
+                                    <div class="col">
+                                        <div class="category-item">
+                                            <div class="category-thumb">
+                                                <a th:href="@{/product/{id}(id = ${iphone.id})}" >
+                                                    <img th:src="${iphone.imageKey}" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="category-content">
+                                                <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">Virtual Product 01</a></h4>
+                                                <div class="price-box">
+                                                    <div class="regular-price" th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}">
+                                                        $150.00
+                                                    </div>
+
+                                                </div>
+                                                <div class="ratings">
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span class="good"><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <div class="pro-review">
+                                                        <span>1 review(s)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end single item -->
+                                    </div> <!-- end single item column -->
+                                </th:block>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- end home sidebar -->
+
+                <div class="col-lg-9">
+                    <!-- featured category area start -->
+                    <div class="feature-category-area mt-md-70">
+                        <div class="section-title mb-30">
+                            <div class="title-icon">
+                                <i class="fa fa-bookmark"></i>
+                            </div>
+                            <h3>AppleWatch</h3>
+                        </div> <!-- section title end -->
+                        <!-- featured category start -->
+                        <div class="featured-carousel-active slick-padding slick-arrow-style">
+                            <!-- product single item start -->
+                            <th:block th:each="iphone : ${listAppleWatch}">
+                                <div class="product-item fix">
+                                    <div class="product-thumb">
+                                        <a th:href="@{/product/{id}(id = ${iphone.id})}">
+                                            <img th:src="${iphone.imageKey}" class="img-pri" alt=""/>
+                                        </a>
+                                        <div class="product-label">
+                                            <span>hot</span>
+                                        </div>
+                                        <div class="product-action-link">
+                                            <a href="#" data-toggle="modal" data-target="#quick_view"> <span
+                                                    data-toggle="tooltip" data-placement="left" title="Quick view"><i
+                                                    class="fa fa-search"></i></span> </a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i
+                                                    class="fa fa-heart-o"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i
+                                                    class="fa fa-refresh"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i
+                                                    class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">affiliate
+                                            product</a>
+                                        </h4>
+                                        <div class="pricebox">
+                                        <span class="regular-price"
+                                              th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}"
+                                        >$90.00</span>
+                                            <div class="ratings">
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span><i class="fa fa-star"></i></span>
+                                                <div class="pro-review">
+                                                    <span>1 review(s)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th:block>
+
+
+
+                        </div>
+                        <!-- featured category end -->
+                    </div>
+                    <!-- featured category area end -->
+
+                    <!-- banner statistic start -->
+<!--                    <div class="banner-statistic pt-28 pb-36">-->
+<!--                        <div class="img-container fix img-full">-->
+<!--                            <a href="#">-->
+<!--                                <img th:src="@{/assets/img/bannershop4.jpg}" alt="">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <!-- banner statistic end -->
+
+                    <!-- featured category area start -->
+                    <div class="feature-category-area">
+                        <div class="section-title mb-30">
+                            <div class="title-icon">
+                                <i class="fa fa-flask"></i>
+                            </div>
+                            <h3>SamSung</h3>
+                        </div> <!-- section title end -->
+                        <!-- featured category start -->
+                        <div class="featured-carousel-active slick-padding slick-arrow-style">
+                            <th:block th:each="iphone : ${listSS}">
+                                <div class="product-item fix">
+                                    <div class="product-thumb">
+                                        <a th:href="@{/product/{id}(id = ${iphone.id})}">
+                                            <img th:src="${iphone.imageKey}" class="img-pri" alt=""/>
+                                        </a>
+                                        <div class="product-label">
+                                            <span>hot</span>
+                                        </div>
+                                        <div class="product-action-link">
+                                            <a href="#" data-toggle="modal" data-target="#quick_view"> <span
+                                                    data-toggle="tooltip" data-placement="left" title="Quick view"><i
+                                                    class="fa fa-search"></i></span> </a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i
+                                                    class="fa fa-heart-o"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i
+                                                    class="fa fa-refresh"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i
+                                                    class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">affiliate
+                                            product</a>
+                                        </h4>
+                                        <div class="pricebox">
+                                        <span class="regular-price"
+                                              th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}"
+                                        >$90.00</span>
+                                            <div class="ratings">
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span><i class="fa fa-star"></i></span>
+                                                <div class="pro-review">
+                                                    <span>1 review(s)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th:block>
+                        </div>
+                        <!-- featured category end -->
+                    </div>
+                    <!-- featured category area end -->
+
+                    <br>
+                    <br>
+                    <!-- featured category area start -->
+                    <div class="feature-category-area">
+                        <div class="section-title mb-30">
+                            <div class="title-icon">
+                                <i class="fa fa-flask"></i>
+                            </div>
+                            <h3>Huawei</h3>
+                        </div> <!-- section title end -->
+                        <!-- featured category start -->
+                        <div class="featured-carousel-active slick-padding slick-arrow-style">
+                            <!-- product single item start -->
+                            <th:block th:each="iphone : ${listHuawei}">
+                                <div class="product-item fix">
+                                    <div class="product-thumb">
+                                        <a th:href="@{/product/{id}(id = ${iphone.id})}">
+                                            <img th:src="${iphone.imageKey}" class="img-pri" alt=""/>
+                                        </a>
+                                        <div class="product-label">
+                                            <span>hot</span>
+                                        </div>
+                                        <div class="product-action-link">
+                                            <a href="#" data-toggle="modal" data-target="#quick_view"> <span
+                                                    data-toggle="tooltip" data-placement="left" title="Quick view"><i
+                                                    class="fa fa-search"></i></span> </a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i
+                                                    class="fa fa-heart-o"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i
+                                                    class="fa fa-refresh"></i></a>
+                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i
+                                                    class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">affiliate
+                                            product</a>
+                                        </h4>
+                                        <div class="pricebox">
+                                        <span class="regular-price"
+                                              th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}"
+                                        >$90.00</span>
+                                            <div class="ratings">
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                <span><i class="fa fa-star"></i></span>
+                                                <div class="pro-review">
+                                                    <span>1 review(s)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th:block>
+                        </div>
+                        <!-- featured category end -->
+                    </div>
+                    <!-- featured category area end -->
+
+                    <br>
+                    <br>
+                    <!-- category features area start -->
+                    <div class="category-feature-area">
+                        <div class="row">
+                            <!-- New Products area start -->
+                            <div class="col-lg-4">
+                                <div class="category-wrapper mb-md-24 mb-sm-24">
+                                    <div class="section-title-2 d-flex justify-content-between mb-28">
+                                        <h3>Sản phẩm mới</h3>
+                                        <div class="category-append"></div>
+                                    </div> <!-- section title end -->
+                                    <div class="category-carousel-active row" data-row="4">
+                                        <th:block th:each="iphone : ${listTop10}">
+                                            <div class="col">
+                                                <div class="category-item">
+                                                    <div class="category-thumb">
+                                                        <a th:href="@{/product/{id}(id = ${iphone.id})}" >
+                                                            <img th:src="${iphone.imageKey}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="category-content">
+                                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">Virtual Product 01</a></h4>
+                                                        <div class="price-box">
+                                                            <div class="regular-price" th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}">
+                                                                $150.00
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="ratings">
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <div class="pro-review">
+                                                                <span>1 review(s)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- end single item -->
+                                            </div> <!-- end single item column -->
+                                        </th:block>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- New Products area end -->
+                            <!-- Most viewed area start -->
+                            <div class="col-lg-4">
+                                <div class="category-wrapper mb-md-24 mb-sm-24">
+                                    <div class="section-title-2 d-flex justify-content-between mb-28">
+                                        <h3>Garmin</h3>
+                                        <div class="category-append"></div>
+                                    </div> <!-- section title end -->
+                                    <div class="category-carousel-active row" data-row="4">
+                                        <th:block th:each="iphone : ${listGarmin}">
+                                            <div class="col">
+                                                <div class="category-item">
+                                                    <div class="category-thumb">
+                                                        <a th:href="@{/product/{id}(id = ${iphone.id})}" >
+                                                            <img th:src="${iphone.imageKey}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="category-content">
+                                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">Virtual Product 01</a></h4>
+                                                        <div class="price-box">
+                                                            <div class="regular-price" th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}">
+                                                                $150.00
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="ratings">
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <div class="pro-review">
+                                                                <span>1 review(s)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- end single item -->
+                                            </div> <!-- end single item column -->
+                                        </th:block>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Most viewed area end -->
+                            <!-- Most viewed area start -->
+                            <div class="col-lg-4">
+                                <div class="category-wrapper mb-md-24 mb-sm-24">
+                                    <div class="section-title-2 d-flex justify-content-between mb-28">
+                                        <h3>Xiaomi</h3>
+                                        <div class="category-append"></div>
+                                    </div> <!-- section title end -->
+                                    <div class="category-carousel-active row" data-row="4">
+                                        <th:block th:each="iphone : ${listXiaomi}">
+                                            <div class="col">
+                                                <div class="category-item">
+                                                    <div class="category-thumb">
+                                                        <a th:href="@{/product/{id}(id = ${iphone.id})}" >
+                                                            <img th:src="${iphone.imageKey}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="category-content">
+                                                        <h4><a th:href="@{/product/{id}(id = ${iphone.id})}" th:text="${iphone.name}">Virtual Product 01</a></h4>
+                                                        <div class="price-box">
+                                                            <div class="regular-price" th:text="${iphone.getRomRespones().get(0).getProductDetailStatusRespones().get(0).getPriceString()}">
+                                                                $150.00
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="ratings">
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span class="good"><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <div class="pro-review">
+                                                                <span>1 review(s)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- end single item -->
+                                            </div> <!-- end single item column -->
+                                        </th:block>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Most viewed area end -->
+                        </div>
+                    </div>
+                    <!-- category features area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page wrapper end -->
+    <br>
+    <br>
+
+
+    <!--&lt;!&ndash;All jQuery, Third Party Plugins & Activation (main.js) Files&ndash;&gt;-->
+    <!--<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>-->
+    <!--&lt;!&ndash; Jquery Min Js &ndash;&gt;-->
+    <!--<script src="assets/js/vendor/jquery-3.3.1.min.js"></script>-->
+    <!--&lt;!&ndash; Popper Min Js &ndash;&gt;-->
+    <!--<script src="assets/js/vendor/popper.min.js"></script>-->
+    <!--&lt;!&ndash; Bootstrap Min Js &ndash;&gt;-->
+    <!--<script src="assets/js/vendor/bootstrap.min.js"></script>-->
+    <!--&lt;!&ndash; Plugins Js&ndash;&gt;-->
+    <!--<script src="assets/js/plugins.js"></script>-->
+    <!--&lt;!&ndash; Ajax Mail Js &ndash;&gt;-->
+    <!--<script src="assets/js/ajax-mail.js"></script>-->
+    <!--&lt;!&ndash; Active Js &ndash;&gt;-->
+    <!--<script src="assets/js/main.js"></script>-->
+    <!--&lt;!&ndash; Switcher JS [Please Remove this when Choose your Final Projct] &ndash;&gt;-->
+    <!--<script src="assets/js/switcher.js"></script>-->
+</div>
+</body>
+
+
+
+</html>
