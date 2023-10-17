@@ -1,4 +1,4 @@
-package watch.store.smart_web.dto.request.customer;
+package com.example.demo.dto.request.customer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

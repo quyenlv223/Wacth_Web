@@ -1,15 +1,16 @@
-package watch.store.smart_web.entity;
+package com.example.demo.entity;
 
+
+import jakarta.persistence.*;
 import lombok.ToString;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @ToString
 @Entity
 @Table(name = "staff", schema = "watch_store", catalog = "")
-public class StaffEntity extends BaseEntity implements Serializable{
+public class StaffEntity extends BaseEntity implements Serializable {
 
     @Id
     @Column(name = "ID")

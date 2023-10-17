@@ -1,7 +1,9 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
 
-import watch.store.smart_web.dto.respone.rom.RomRespone;
+
+
+import com.example.demo.dto.respone.rom.RomRespone;
 
 import java.util.List;
 

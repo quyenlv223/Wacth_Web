@@ -1,7 +1,8 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
+import com.example.demo.entity.CategoryEntity;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.entity.CategoryEntity;
+
 
 import java.util.List;
 

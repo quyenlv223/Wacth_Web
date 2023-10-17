@@ -1,11 +1,12 @@
-package watch.store.smart_web.api;
+package com.example.demo.api;
 
+import com.example.demo.dto.request.cart.CartEditRequest;
+import com.example.demo.dto.request.cart.CartRequest;
+import com.example.demo.service.CartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import watch.store.smart_web.dto.request.cart.CartEditRequest;
-import watch.store.smart_web.dto.request.cart.CartRequest;
-import watch.store.smart_web.service.CartService;
+
 
 import java.util.List;
 

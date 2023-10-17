@@ -1,4 +1,4 @@
-package watch.store.smart_web.controller;
+package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 

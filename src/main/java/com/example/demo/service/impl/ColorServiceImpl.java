@@ -1,11 +1,13 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.entity.ColorEntity;
+import com.example.demo.repo.ColorRepo;
+import com.example.demo.service.ColorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.entity.ColorEntity;
-import watch.store.smart_web.repo.ColorRepo;
-import watch.store.smart_web.service.ColorService;
+
 
 @Service
 @Slf4j

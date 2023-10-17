@@ -1,6 +1,8 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
 
+
+import com.example.demo.entity.CustomerEntity;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.entity.CustomerEntity;
+
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;

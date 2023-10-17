@@ -1,13 +1,14 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.dto.respone.rom.RomRespone;
+import com.example.demo.entity.RomEntity;
+import com.example.demo.repo.RomRepo;
+import com.example.demo.service.ProductDetailStatusService;
+import com.example.demo.service.RomService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.dto.respone.rom.RomRespone;
-import watch.store.smart_web.entity.RomEntity;
-import watch.store.smart_web.repo.RomRepo;
-import watch.store.smart_web.service.ProductDetailStatusService;
-import watch.store.smart_web.service.RomService;
 
 import java.util.ArrayList;
 import java.util.List;

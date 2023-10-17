@@ -1,18 +1,19 @@
-package watch.store.smart_web.controller;
+package com.example.demo.controller;
 
+import com.example.demo.dto.respone.cart.CartRespone;
+import com.example.demo.entity.CustomerEntity;
+import com.example.demo.entity.OrdersEntity;
+import com.example.demo.repo.OrdersRepo;
+import com.example.demo.service.CartService;
+import com.example.demo.service.CustomerService;
+import com.example.demo.util.ConvertUtil;
+import com.example.demo.util.SessionUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import watch.store.smart_web.dto.respone.cart.CartRespone;
-import watch.store.smart_web.entity.CustomerEntity;
-import watch.store.smart_web.entity.OrdersEntity;
-import watch.store.smart_web.repo.OrdersRepo;
-import watch.store.smart_web.service.CartService;
-import watch.store.smart_web.service.CustomerService;
-import watch.store.smart_web.util.ConvertUtil;
-import watch.store.smart_web.util.SessionUtil;
+
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;

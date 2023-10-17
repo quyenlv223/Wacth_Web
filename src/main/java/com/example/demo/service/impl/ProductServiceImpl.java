@@ -1,19 +1,21 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.dto.respone.product.NewProductRespone;
+import com.example.demo.dto.respone.product.ProductRespone;
+import com.example.demo.entity.CategoryEntity;
+import com.example.demo.entity.ProductDetailStatusEntity;
+import com.example.demo.entity.ProductEntity;
+import com.example.demo.repo.CategoryRepo;
+import com.example.demo.repo.ProductDetailStatusRepo;
+import com.example.demo.repo.ProductRepo;
+import com.example.demo.service.ProductService;
+import com.example.demo.util.ConvertUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.dto.respone.product.NewProductRespone;
-import watch.store.smart_web.dto.respone.product.ProductRespone;
-import watch.store.smart_web.entity.CategoryEntity;
-import watch.store.smart_web.entity.ProductEntity;
-import watch.store.smart_web.entity.ProductDetailStatusEntity;
-import watch.store.smart_web.repo.CategoryRepo;
-import watch.store.smart_web.repo.ProductDetailStatusRepo;
-import watch.store.smart_web.repo.ProductRepo;
-import watch.store.smart_web.service.ProductService;
-import watch.store.smart_web.util.ConvertUtil;
+
 
 import java.util.ArrayList;
 import java.util.List;

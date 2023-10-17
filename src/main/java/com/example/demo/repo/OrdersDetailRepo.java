@@ -1,10 +1,9 @@
-package watch.store.smart_web.repo;
+package com.example.demo.repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.demo.entity.OrdersDetailEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import watch.store.smart_web.entity.OrdersDetailEntity;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 

@@ -1,13 +1,14 @@
-package watch.store.smart_web.api;
+package com.example.demo.api;
 
+import com.example.demo.dto.request.customer.CustomerRequest;
+import com.example.demo.entity.CustomerEntity;
+import com.example.demo.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import watch.store.smart_web.dto.request.customer.CustomerRequest;
-import watch.store.smart_web.entity.CustomerEntity;
-import watch.store.smart_web.service.CustomerService;
+
 
 import java.text.ParseException;
 

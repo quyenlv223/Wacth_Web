@@ -1,6 +1,6 @@
-package watch.store.smart_web.entity;
+package com.example.demo.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "promotion_product", schema = "watch_store", catalog = "")

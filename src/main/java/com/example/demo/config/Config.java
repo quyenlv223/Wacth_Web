@@ -1,4 +1,4 @@
-package watch.store.smart_web.config;
+package com.example.demo.config;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

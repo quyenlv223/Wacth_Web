@@ -1,4 +1,4 @@
-package watch.store.smart_web.dto.respone.attribute;
+package com.example.demo.dto.respone.attribute;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

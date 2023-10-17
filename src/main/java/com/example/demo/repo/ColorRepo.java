@@ -1,8 +1,9 @@
-package watch.store.smart_web.repo;
+package com.example.demo.repo;
 
+import com.example.demo.entity.ColorEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import watch.store.smart_web.entity.ColorEntity;
+
 
 @Repository
 public interface ColorRepo extends JpaRepository<ColorEntity, Long> {

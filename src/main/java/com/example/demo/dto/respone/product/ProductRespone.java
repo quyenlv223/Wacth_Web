@@ -1,11 +1,11 @@
-package watch.store.smart_web.dto.respone.product;
+package com.example.demo.dto.respone.product;
 
+import com.example.demo.dto.respone.attribute.AttributeRespone;
+import com.example.demo.dto.respone.rom.RomRespone;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import watch.store.smart_web.dto.respone.attribute.AttributeRespone;
-import watch.store.smart_web.dto.respone.rom.RomRespone;
 
 import java.util.List;
 

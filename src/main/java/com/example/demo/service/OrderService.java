@@ -1,10 +1,12 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
 
-import watch.store.smart_web.dto.request.orders.OrdersRequest;
-import watch.store.smart_web.dto.respone.cart.CartRespone;
-import watch.store.smart_web.dto.respone.order.OrderRespone;
-import watch.store.smart_web.entity.OrdersEntity;
+
+
+import com.example.demo.dto.request.orders.OrdersRequest;
+import com.example.demo.dto.respone.cart.CartRespone;
+import com.example.demo.dto.respone.order.OrderRespone;
+import com.example.demo.entity.OrdersEntity;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;

@@ -1,14 +1,17 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.dto.respone.product.ProductDetailStatusRespone;
+import com.example.demo.entity.ProductDetailStatusEntity;
+import com.example.demo.repo.ProductDetailStatusRepo;
+import com.example.demo.service.ColorService;
+import com.example.demo.service.ProductDetailStatusService;
+import com.example.demo.util.ConvertUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.dto.respone.product.ProductDetailStatusRespone;
-import watch.store.smart_web.entity.ProductDetailStatusEntity;
-import watch.store.smart_web.repo.ProductDetailStatusRepo;
-import watch.store.smart_web.service.ColorService;
-import watch.store.smart_web.service.ProductDetailStatusService;
-import watch.store.smart_web.util.ConvertUtil;
+
+
 
 import java.util.ArrayList;
 import java.util.List;

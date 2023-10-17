@@ -1,12 +1,13 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+import com.example.demo.dto.respone.attribute.AttributeRespone;
+import com.example.demo.entity.AttributeProductEntity;
+import com.example.demo.repo.*;
+import com.example.demo.service.AttributeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.dto.respone.attribute.AttributeRespone;
-import watch.store.smart_web.entity.AttributeProductEntity;
-import watch.store.smart_web.repo.*;
-import watch.store.smart_web.service.AttributeService;
+
 
 
 @Service

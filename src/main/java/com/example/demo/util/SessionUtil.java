@@ -1,4 +1,4 @@
-package watch.store.smart_web.util;
+package com.example.demo.util;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

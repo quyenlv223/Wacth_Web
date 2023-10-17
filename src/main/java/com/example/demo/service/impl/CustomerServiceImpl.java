@@ -1,14 +1,16 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.dto.request.customer.CustomerRequest;
+import com.example.demo.entity.CustomerEntity;
+import com.example.demo.repo.CustomerRepo;
+import com.example.demo.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.dto.request.customer.CustomerRequest;
-import watch.store.smart_web.entity.CustomerEntity;
-import watch.store.smart_web.repo.CustomerRepo;
-import watch.store.smart_web.service.CustomerService;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

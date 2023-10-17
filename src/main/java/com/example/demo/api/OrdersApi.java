@@ -1,11 +1,12 @@
-package watch.store.smart_web.api;
+package com.example.demo.api;
 
+import com.example.demo.dto.request.orders.OrdersRequest;
+import com.example.demo.entity.OrdersEntity;
+import com.example.demo.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import watch.store.smart_web.dto.request.orders.OrdersRequest;
-import watch.store.smart_web.entity.OrdersEntity;
-import watch.store.smart_web.service.OrderService;
+
 
 import javax.servlet.http.HttpServletRequest;
 

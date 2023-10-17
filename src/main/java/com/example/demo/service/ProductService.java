@@ -1,8 +1,9 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
+import com.example.demo.dto.respone.product.NewProductRespone;
+import com.example.demo.dto.respone.product.ProductRespone;
 import org.springframework.data.domain.Pageable;
-import watch.store.smart_web.dto.respone.product.NewProductRespone;
-import watch.store.smart_web.dto.respone.product.ProductRespone;
+
 
 import java.util.List;
 

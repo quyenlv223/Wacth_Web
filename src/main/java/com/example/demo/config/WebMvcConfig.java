@@ -1,10 +1,10 @@
-package watch.store.smart_web.config;
+package com.example.demo.config;
 
+import com.example.demo.intercepter.CartIntercepter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import watch.store.smart_web.intercepter.CartIntercepter;
 
 
 @RequiredArgsConstructor

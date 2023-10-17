@@ -1,7 +1,7 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
-import watch.store.smart_web.dto.respone.attribute.AttributeRespone;
 
+import com.example.demo.dto.respone.attribute.AttributeRespone;
 
 public interface AttributeService {
     AttributeRespone findByProduct(Long id);

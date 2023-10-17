@@ -1,4 +1,4 @@
-package watch.store.smart_web.dto.request.orders;
+package com.example.demo.dto.request.orders;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

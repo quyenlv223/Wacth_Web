@@ -1,10 +1,13 @@
-package watch.store.smart_web.service.impl;
+package com.example.demo.service.impl;
 
+
+import com.example.demo.entity.CategoryEntity;
+import com.example.demo.repo.CategoryRepo;
+import com.example.demo.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import watch.store.smart_web.entity.CategoryEntity;
-import watch.store.smart_web.repo.CategoryRepo;
-import watch.store.smart_web.service.CategoryService;
+
+
 
 import java.util.List;
 

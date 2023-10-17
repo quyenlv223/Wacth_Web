@@ -1,7 +1,8 @@
-package watch.store.smart_web.service;
+package com.example.demo.service;
 
-import watch.store.smart_web.dto.request.customer.CustomerRequest;
-import watch.store.smart_web.entity.CustomerEntity;
+
+import com.example.demo.dto.request.customer.CustomerRequest;
+import com.example.demo.entity.CustomerEntity;
 
 import java.text.ParseException;
 

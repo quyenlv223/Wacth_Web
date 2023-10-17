@@ -1,5 +1,4 @@
-package watch.store.smart_web.constant;
-
+package com.example.demo.constant;
 
 
 public class AttributeConstant {

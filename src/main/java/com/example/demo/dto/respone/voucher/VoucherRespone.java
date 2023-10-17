@@ -1,4 +1,4 @@
-package watch.store.smart_web.dto.respone.voucher;
+package com.example.demo.dto.respone.voucher;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

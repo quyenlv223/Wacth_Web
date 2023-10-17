@@ -1,7 +1,8 @@
-package watch.store.smart_web.entity;
+package com.example.demo.entity;
 
+import jakarta.persistence.*;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -9,7 +10,8 @@ import java.util.List;
 @Table(name = "customer", schema = "watch_store", catalog = "")
 public class CustomerEntity {
 
-    @Id    @Column( name = "ID")
+    @Id
+    @Column( name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
